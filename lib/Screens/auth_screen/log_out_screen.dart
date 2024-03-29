@@ -7,7 +7,8 @@ class LogOutRequest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
+      child: Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -213,6 +214,7 @@ class LogOutRequest extends StatelessWidget {
           const NavBarSecond()
         ],
       ),
+    ),
     );
   }
 }

@@ -7,7 +7,8 @@ class DriverInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return SingleChildScrollView(
+      child: Column(
       children: [
         const SizedBox(
           height: 60,
@@ -186,6 +187,7 @@ class DriverInfo extends StatelessWidget {
           ),
         ),
       ],
+    ),
     );
   }
 }

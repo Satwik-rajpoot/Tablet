@@ -1,15 +1,15 @@
 import 'dart:ui';
-
+import 'package:gradient_borders/gradient_borders.dart';
 import 'package:flutter/material.dart';
+// import 'package:tablet/NavBar/second_navbar.dart';
 
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
-
-class DriverInfoScreenSecond extends StatelessWidget {
-  const DriverInfoScreenSecond({super.key});
+class Add3Screen extends StatelessWidget {
+  const Add3Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
+      child: Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -22,333 +22,67 @@ class DriverInfoScreenSecond extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const SizedBox(
-            height: 30,
-          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
                 child: SizedBox(
-                  height: 175,
-                  width: 1280,
+                  height: 660,
+                  width: 1216,
                   child: Expanded(
                     child: Container(
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("asset/textsnap.png"),
+                            image: AssetImage("asset/addthree.png"),
                             fit: BoxFit.cover),
                         borderRadius: BorderRadius.all(
                           Radius.circular(12),
                         ),
                       ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              ClipRRect(
-                // borderRadius: BorderRadius.circular(25),
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                  child: Container(
-                    height: 70,
-                    width: 1210,
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(colors: [
-                        Color.fromARGB(59, 255, 255, 255),
-                        Color.fromARGB(19, 255, 255, 255)
-                      ], begin: Alignment.topLeft, end: Alignment.bottomCenter),
-                      borderRadius: BorderRadius.circular(19),
-                      border: Border.all(width: 2, color: Colors.white30),
-                    ),
-                    child: Row(
-                      children: [
-                        const SizedBox(
-                          width: 30,
-                        ),
-                        Column(
-                          children: [
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Image.asset(
-                              "asset/car.png",
-                              height: 30,
-                              width: 44,
-                            ),
-                            const Text(
-                              "Prime Sedan",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 8),
-                            )
-                          ],
-                        ),
-                        const SizedBox(
-                          width: 50,
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(19),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                            child: Container(
-                                height: 50,
-                                width: 336,
-                                decoration: BoxDecoration(
-                                  color: const Color.fromARGB(255, 45, 48, 125),
-                                  borderRadius: BorderRadius.circular(19),
-                                  border: Border.all(
-                                      width: 2, color: Colors.white30),
-                                ),
-                                child: Row(
-                                  children: [
-                                    const SizedBox(
-                                      width: 15,
-                                    ),
-                                    Image.asset(
-                                      "asset/seatbelt.png",
-                                      height: 35,
-                                      width: 40,
-                                    ),
-                                    const SizedBox(
-                                      width: 23,
-                                    ),
-                                    const Text(
-                                      "Wear your seat belt",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 22,
-                                          fontWeight: FontWeight.w500),
-                                    )
-                                  ],
-                                )),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 40,
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(19),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                            child: Container(
-                                height: 50,
-                                width: 336,
-                                decoration: BoxDecoration(
-                                  gradient: const LinearGradient(
-                                      colors: [
-                                        Color.fromARGB(59, 255, 255, 255),
-                                        Color.fromARGB(19, 255, 255, 255)
-                                      ],
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomCenter),
-                                  borderRadius: BorderRadius.circular(19),
-                                  border: Border.all(
-                                      width: 2, color: Colors.white30),
-                                ),
-                                child: const Align(
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      "HONDA i10 Grand",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w500),
-                                    ))),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(19),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                            child: Container(
-                                height: 50,
-                                width: 336,
-                                decoration: BoxDecoration(
-                                  gradient: const LinearGradient(
-                                      colors: [
-                                        Color.fromARGB(59, 255, 255, 255),
-                                        Color.fromARGB(19, 255, 255, 255)
-                                      ],
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomCenter),
-                                  borderRadius: BorderRadius.circular(19),
-                                  border: Border.all(
-                                      width: 2, color: Colors.white30),
-                                ),
-                                child: const Align(
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      "AP F0U0 C0 K0 U00",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w500),
-                                    ))),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: [
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(19),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                      child: Container(
-                        height: 372,
-                        width: 279,
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              colors: [
-                                Color.fromARGB(59, 255, 255, 255),
-                                Color.fromARGB(19, 255, 255, 255)
-                              ],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomCenter),
-                          borderRadius: BorderRadius.circular(19),
-                          border: Border.all(width: 2, color: Colors.white30),
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 40,
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(19),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                      child: Container(
-                        height: 372,
-                        width: 190,
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              colors: [
-                                Color.fromARGB(59, 255, 255, 255),
-                                Color.fromARGB(19, 255, 255, 255)
-                              ],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomCenter),
-                          borderRadius: BorderRadius.circular(19),
-                          border: Border.all(width: 2, color: Colors.white30),
-                        ),
-                        child: const Column(
-                          children: [
-                            SizedBox(
-                              height: 40,
-                            ),
-                            Text("I understand",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w500))
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 40,
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(19),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                      child: Container(
-                        height: 372,
-                        width: 310,
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              colors: [
-                                Color.fromARGB(59, 255, 255, 255),
-                                Color.fromARGB(19, 255, 255, 255)
-                              ],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomCenter),
-                          borderRadius: BorderRadius.circular(19),
-                          border: Border.all(width: 2, color: Colors.white30),
-                        ),
+                      child: Align(
+                        alignment: Alignment.centerRight,
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const SizedBox(
-                              height: 20,
+                            RawMaterialButton(
+                              onPressed: () {},
+                              elevation: 2.0,
+                              fillColor:
+                                  const Color.fromARGB(255, 234, 243, 248),
+                              padding: const EdgeInsets.all(15.0),
+                              shape: const CircleBorder(),
+                              child: const Icon(
+                                Icons.thumb_up,
+                                size: 28.0,
+                              ),
                             ),
-                            Row(
-                              children: [
-                                const SizedBox(
-                                  width: 18,
-                                ),
-                                Image.asset(
-                                  "asset/paymentsicon.png",
-                                  height: 34,
-                                  width: 156,
-                                ),
-                                const SizedBox(
-                                  width: 18,
-                                ),
-                                const Text(
-                                  "My QR",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ],
-                            )
+                            const SizedBox(
+                              height: 12,
+                            ),
+                            RawMaterialButton(
+                              onPressed: () {},
+                              elevation: 2.0,
+                              fillColor:
+                                  const Color.fromARGB(255, 234, 243, 248),
+                              padding: const EdgeInsets.all(15.0),
+                              shape: const CircleBorder(),
+                              child: const Icon(
+                                Icons.thumb_down,
+                                size: 28.0,
+                              ),
+                            ),
                           ],
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(19),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                      child: Container(
-                        height: 372,
-                        width: 310,
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              colors: [
-                                Color.fromARGB(59, 255, 255, 255),
-                                Color.fromARGB(19, 255, 255, 255)
-                              ],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomCenter),
-                          borderRadius: BorderRadius.circular(19),
-                          border: Border.all(width: 2, color: Colors.white30),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               )
             ],
           ),
           const SizedBox(
             height: 10,
           ),
-          //NavBar Second
           SizedBox(
             height: 70,
             width: 1268,
@@ -794,6 +528,7 @@ class DriverInfoScreenSecond extends StatelessWidget {
           )
         ],
       ),
+    ),
     );
   }
 }

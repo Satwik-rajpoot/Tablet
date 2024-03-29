@@ -7,7 +7,8 @@ class UpdateScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
+      child: Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -151,6 +152,7 @@ class UpdateScreen extends StatelessWidget {
           const NavBarSecond()
         ],
       ),
+    ),
     );
   }
 }

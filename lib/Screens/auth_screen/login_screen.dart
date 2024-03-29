@@ -5,7 +5,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return SingleChildScrollView(
+      child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
@@ -186,6 +187,7 @@ class LoginScreen extends StatelessWidget {
               )),
         )
       ],
+    ), 
     );
   }
 }

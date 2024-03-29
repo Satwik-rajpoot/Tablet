@@ -1,88 +1,19 @@
 import 'dart:ui';
-import 'package:gradient_borders/gradient_borders.dart';
-import 'package:flutter/material.dart';
-// import 'package:tablet/NavBar/second_navbar.dart';
 
-class Add3Screen extends StatelessWidget {
-  const Add3Screen({super.key});
+import 'package:flutter/material.dart';
+import 'package:gradient_borders/gradient_borders.dart';
+
+class NavbarWidget extends StatefulWidget {
+  const NavbarWidget({super.key});
 
   @override
+  State<NavbarWidget> createState() => _NavbarWidgetState();
+}
+
+class _NavbarWidgetState extends State<NavbarWidget> {
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFF030804),
-              Color(0xFF113921),
-              Color.fromARGB(255, 21, 97, 54),
-            ]),
-      ),
-      child: Column(
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: SizedBox(
-                  height: 660,
-                  width: 1216,
-                  child: Expanded(
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("asset/addthree.png"),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(12),
-                        ),
-                      ),
-                      child: Align(
-                        alignment: Alignment.centerRight,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            RawMaterialButton(
-                              onPressed: () {},
-                              elevation: 2.0,
-                              fillColor:
-                                  const Color.fromARGB(255, 234, 243, 248),
-                              padding: const EdgeInsets.all(15.0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.thumb_up,
-                                size: 28.0,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 12,
-                            ),
-                            RawMaterialButton(
-                              onPressed: () {},
-                              elevation: 2.0,
-                              fillColor:
-                                  const Color.fromARGB(255, 234, 243, 248),
-                              padding: const EdgeInsets.all(15.0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.thumb_down,
-                                size: 28.0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          SizedBox(
+    return SizedBox(
             height: 70,
             width: 1268,
             child: Container(
@@ -524,9 +455,6 @@ class Add3Screen extends StatelessWidget {
                 ],
               ),
             ),
-          )
-        ],
-      ),
-    );
+          );
   }
 }
